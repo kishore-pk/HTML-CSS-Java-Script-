@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-CSS3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 300px 300px 300px ;
+            justify-content: center;
+            
+          
+        }
+        .container figure {
+            margin: 0px;
+            width: 90%;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 10px;
+        }
+        .container figure img{
+           width: 100%;
+           border-radius: 30px;
+
+        }
+        .container figure figcaption{
+            font-size: 20px;
+            text-align: center ;
+            color: palevioletred;
+        }
+        .container figure p{
+            text-align: justify;
+        }
+        .container div{
+            position: relative;
+            left: 50px ;
+        }
+        .container figure button{
+            border: none;
+            
+            background-color: yellowgreen;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+
+        }
+        .container figure button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .container .fa-instagram{
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .container .fa-facebook{
+            border: 1px solid;
+            border-radius: 30px;
+            padding: 10px;
+        }
+        i:hover{
+            background-color: skyblue;
+            transform: rotate(450deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container -->
+     <div class="container">
+        <figure>
+            <img src="https://media.istockphoto.com/id/1149529035/photo/this-looks-interesting.jpg?s=612x612&w=is&k=20&c=kXfe2xx4HfKriJczGe_BpEs5tq9z7TIzSAMfMUkpwkQ=" alt="dev-1">
+            <figcaption>Software Engineer</figcaption>
+            <p>Cropped shot of a handsome young businessman working late at night at his desk in the office</p>
+            <div>
+            <i class="fa-brands fa-instagram"></i>
+            <button>Know More</button>
+            <i class="fa-brands fa-facebook"></i>
+            </div>
+        </figure>
+        <figure>
+            <img src="https://media.istockphoto.com/id/1149529035/photo/this-looks-interesting.jpg?s=612x612&w=is&k=20&c=kXfe2xx4HfKriJczGe_BpEs5tq9z7TIzSAMfMUkpwkQ=" alt="dev-1">
+            <figcaption>Software Engineer</figcaption>
+            <p>Cropped shot of a handsome young businessman working late at night at his desk in the office</p>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <button>Know More</button>
+                <i class="fa-brands fa-facebook"></i>
+                </div>
+        </figure>
+        <figure>
+            <img src="https://media.istockphoto.com/id/1149529035/photo/this-looks-interesting.jpg?s=612x612&w=is&k=20&c=kXfe2xx4HfKriJczGe_BpEs5tq9z7TIzSAMfMUkpwkQ=" alt="dev-1">
+            <figcaption>Software Engineer</figcaption>
+            <p>Cropped shot of a handsome young businessman working late at night at his desk in the office</p>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <button>Know More</button>
+                <i class="fa-brands fa-facebook"></i>
+                </div>
+        </figure>
+     </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Seleectors CSS</title>
+    <style>
+        body{
+            background-color: orangered;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        form{
+            width: 500px;
+            position: relative;
+            top: 200px;
+            left: 600px;
+            background-color: white;
+            padding: 40px;
+            height: 250px;
+            border-radius: 20px
+        }
+        /*1. Has attribute : [attribute name]*/
+        [type]{
+            width: 95%;
+        }
+        /*2. attribute value equals to : [attr-name='Attr-value']  */
+        [type='submit']{
+            width: 99.3%;
+        }
+        /*3. attribute value starts with : [attr-name ^='Attr-value']  */
+        [placeholder^="E"]{
+            padding: 20px;
+            margin: 2px;
+        }
+        /*4. attribute value ends with : [attr-name $='Attr-value']  */
+    
+        h2{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .login input{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login button{
+            background-color: orangered;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div class="login">
+        <h2>Login Form</h2>
+        <input type="text" name="uname" placeholder="Enter your name">
+        <input type="password" name="pswd" placeholder="Enter your password">
+        <button type="submit">Login</button>
+        <p>Already have an account? <a href="../HTML/Forms/Resister form.html">Click here</a></p>
+        </div>
+    </form>
+</body>
+</html>

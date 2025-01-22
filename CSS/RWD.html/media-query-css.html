@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD(Media-Query)</title>
+    <style>
+        section{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        div{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        /* to implement media  query in CSS (@MOSA) */
+        /* Small  Screen */
+        @media only screen and (min-width:320px) and (max-width:576px){
+            section{
+                grid-template-columns: repeat(1, 1fr);
+                background-color: orangered;
+            }
+            div{
+                color: white;
+                border: 7px double yellowgreen;
+                font-variant:small-caps;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>Small Device</div>
+        <div>Medium Device</div>
+        <div>Large Device</div>
+        <div>Extra Large Device</div>
+    </section>
+</body>
+</html>

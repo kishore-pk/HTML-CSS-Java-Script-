@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Selectors CSS</title>
+    <style>
+        section{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 5px;
+        }
+        /******************Psuedo class**************/
+        /* Syntax of Psuedo class ( colon :)
+            
+            any selctor:element state{
+                p.n : p.v
+            }    
+        */
+        /* section:hover{
+            background-color: black;
+            color: white;
+        }
+        section:nth-child(2n+2){
+            background-color: black;
+            color: white;
+        }
+        /* section:nth-child(5){
+            border-radius: 50px;
+            font-size: 30px;
+        }  */
+        section:last-child{
+            background-color: black;
+            color: white;
+        }*/
+
+        /******************Psuedo element**************/
+        /* Syntax of Psuedo element ( colon ::)
+            
+            any selctor::element state{
+                p.n : p.v
+            }   
+        */
+        section::before{
+           content: 'My name is';
+        }
+        section::after{
+            content: ' I am learning CSS in AIT.';
+        }
+        section::first-letter{
+            font-size: 30px;
+        } 
+        p::first-line{
+            border: 1px solid red;
+            background-color: black;
+            color: red;
+        }
+        p::selection{
+            background-color: #ff1949;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>Ankit</section>
+    <section>Jhon</section>
+    <section>Raj</section>
+    <section>Kishore</section>
+    <section>David</section>
+    <section>Hari</section>
+    <section>Sai</section>
+    <section>Hareesh</section>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum maiores minima, illum, enim quam a eum pariatur aliquid mollitia itaque accusamus quia incidunt dignissimos, laudantium quo sequi eaque nisi excepturi!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab temporibus debitis dolore quas quam quod repellendus quasi voluptate officiis perspiciatis unde cupiditate ex inventore magni sed tenetur, alias doloremque exercitationem.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure odit eveniet atque. Minus amet repellendus fugiat perferendis suscipit deleniti fugit accusamus illo animi optio voluptates reiciendis asperiores, esse fuga dicta.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam itaque officiis quo nobis natus optio ipsam atque quas deserunt iure sequi quia pariatur ducimus, minima tempore voluptates. Suscipit, vero temporibus!
+    </p>
+</body>
+</html>

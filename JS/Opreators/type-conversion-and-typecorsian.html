@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type-conversion and Type-coercion-Js</title>
+</head>
+<body>
+    <script>
+        //only three datatypes can be converted
+        /*
+            1. Number
+            2. string
+            3. Boolean
+        */
+
+        // 1. To convert numeric string into number
+        let num = '2025';
+        console.log(num);
+        console.log(typeof num);
+
+        // Number funtion
+        let res = Number(num)
+        console.log(res);
+        console.log(typeof res);
+
+        // Modern way of converting
+        console.log(+num);
+
+        // parseInt ()
+        console.log(parseInt(num));
+
+        // parsefloat ()
+        console.log(parseFloat(num));
+
+
+
+        // 2. To convert number into string
+
+        let str = 2025;
+        console.log(str);
+        console.log(typeof str);
+
+        // String Constructor
+        let strNum = String(str);
+        console.log(strNum);
+        console.log(typeof strNum);
+
+        // toString()
+        console.log(str.toString());
+
+        // Boolean conversion
+
+        console.log(Boolean(0)); // false
+        console.log(Boolean(''));
+        console.log(Boolean(undefined));
+        console.log(Boolean(null));
+        console.log(Boolean(NaN));
+        console.log(Boolean(-0));
+        console.log(Boolean(1));
+
+
+
+        // Type Coercion:
+
+        console.log(2+'hello'+undefined);
+        console.log(2+9+undefined);
+        console.log(2+'2');
+        console.log(2-'2');
+        console.log(2*'2');
+        console.log(2/'2');
+        console.log(2*true+2);
+        console.log(2+true+2+true);
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIT-Page-HTML-and-CSS</title>
+    <style>
+        header{
+            
+            display: flex;
+            align-items: center
+        }
+        header div{
+            flex: 2;
+        }
+        header nav{
+            flex: 8;
+        }
+        header form{
+            flex: 2;
+        }
+        header div img{
+            width: 250px;
+            height: 70px;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+             flex: 1;
+             list-style: none;
+        }
+        header nav ul li a{
+            text-decoration: none;
+        }
+        header form button{
+            border: 1px solid #005ea6;
+            padding: 10px;
+            width: 80px;
+            border-radius: 30px;
+        }
+        header form button:nth-child(2){
+            background-color: #005ea6;
+            color: white;
+        }
+        section img{
+            width: 100%;
+        }
+
+        footer{
+            display: flex;
+        }
+        footer div{
+            flex: 3;
+        }
+        .products ul{
+            flex: 5;
+            list-style-type: none;
+            
+        }
+        .Services--{
+            flex: 5;
+        }
+        footer nav{
+            flex: 2;
+        }
+        footer div img{
+            width: 250px;
+            height: 150px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .Services--{
+            margin-top: 20px;
+        }
+        .Services--{
+            font-size: 20px;
+            color: black;
+        }
+
+        .Services{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .Services a{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #004c99; 
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+        .Services a:hover {
+            background-color: #003366;
+        }
+        footer nav ul{
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!--header starts here-->
+    <header>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">INDIVIDUAL</a>
+                </li>
+                <li>
+                    <a href="">BUISNESS</a>
+                </li>
+                <li>
+                    <a href="">PARTNERS</a>
+                </li>
+                <li>
+                    <a href="">USEFUL INFO</a>
+                </li>
+            </ul>
+        </nav>
+        <form>
+            <button>Log In</button>
+            <button>Sign Up</button>
+        </form>
+    </header>
+    <!--header ends here-->
+    <!--banner  portion starts here -->
+    <section>
+        <img src="https://www.achieversit.com/assets/images//aws_training.jpg">
+    </section>
+    <!--banner portion ends here-->
+
+    <!--footer starts here-->
+    <footer>
+        <div>
+            <img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png">
+            <p>
+                PayPal Services in India are provided by PayPal Payments Private Limited (CIN U74990MH2009PTC194653).Users are advised to read the terms and conditions carefully.
+            </p>
+        </div>
+        <div class="products">
+        <h1>Products-PayPal</h1>
+        <ul>
+            <li>Payment Platform</li>
+            <li>Credit and Debit cards</li>
+            <li>Buyer Protection</li>
+            <li>Parallel payments</li>
+        </ul>
+        </div>
+        <div class="Services--">
+            <h3>Stay Connected</h3>
+            <div class="Services">
+                <a href="https://facebook.com" target="_blank">f</a>
+                <a href="https://twitter.com" target="_blank">t</a>
+                <a href="https://instagram.com" target="_blank">i</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.paypal.com/in/smarthelp/contact-us" target="_blank">Contact</a>
+                </li><br> <br>
+                <li>
+                    <a href="https://www.paypal.com/in/cshelp/personal" target="_blank">Help</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <!--footer  ends here-->
+
+</body>
+</html>

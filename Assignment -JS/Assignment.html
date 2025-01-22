@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------ reverse a string------- //
+            let str = "java";
+            let result = "";
+            for (let i = str.length; i>0; i--){
+                result = result+str[i-1];
+            }
+
+            console.log(result);
+            
+            //------- prime number---------//
+            let num = 3;
+
+            if(num % 2 === 0){
+                console.log("Prime number");
+            }
+            else{
+                console.log("Not a prime number");
+            }
+
+            //--------find a maximum in an array------//
+            let arr = [2,3,4,5];
+
+            let max = arr[0];
+            for(let i=0;i<arr.length;i++){
+                if(max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+            console.log(max);
+
+            //--------palindrome------//
+            let number = "121";
+            let rev = "";
+            for(let i=number.length; i>0; i--){
+                rev = rev+number[i-1];
+            }
+            if(number===rev){
+                console.log("Palindrome");
+            }
+            else{
+                console.log("Not palindrome");
+            }
+
+            //------multiplication table for a given number -----//
+
+            let num1 = 5;
+
+            for(let i=1;i<=10;i++){
+                console.log(`${num1} * ${i} = ${num1*i}`);
+            }
+
+            //--------all factors of a given number-------//
+            let fact = 6;
+            for(let i=1;i<=6;i++){
+                if(fact % i === 0){
+                    console.log(i);
+                }
+            }
+
+            //--------Use a loop to print all odd numbers-------//
+            let odd = 10;
+            for(let i=1;i<=10;i++){
+                if(i % 2!==0){
+                    console.log(i);
+                }
+            }
+
+            //---------pattterns---------//
+            let patterNum = 4;
+            for(let i=1;i<4;i++){
+                console.log("*".repeat(i));
+            }
+
+            //---------space pattterns---------//
+            let spacePattern = 4;
+            for(let i=1;i<4;i++){
+                let spaces =" ".repeat(spacePattern-i);
+                console.log(spaces + ("*".repeat(i)));
+            }
+
+            //--------positive or negative in a given array-----//
+
+            let arr1 = [2,3,4,5];
+
+            let  count = 0;
+            for(let i=0;i<arr1.length;i++){
+                if(arr1[i] %  2 === 0){
+                    count = count + 1; 
+                }
+            }
+            console.log(count);
+
+
+            //------greater number-----//
+            let a = 5;
+            let b = 10;
+
+            if(a>b){
+                console.log(`${a} is greater than ${b}`);
+            }
+            else{
+                console.log(`${b} is greater than ${a}`);
+            }
+
+
+            
+           
+
+    </script>
+</body>
+</html>
