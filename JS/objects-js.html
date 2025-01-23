@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-JS</title>
+</head>
+<body>
+    <script>
+
+        // Object : are the cornerstone of javascript oops paradiagm that can be used to store the data in form of keys and values
+        // ways to create an object
+        // 1. Literal way 
+
+        // let  studentDetails ={
+        //     name : 'Kishore',
+        //     age : 21,
+        //     qualification : 'BCA',
+        //     course : 'MERN'
+        // }
+        // // To print in lteral way
+        // console.log(studentDetails);
+
+        // // 2. COnstructor way
+        // let studentDetailsOne = new Object();
+
+        // // To add any pproperty in existing obj:
+        // studentDetailsOne.name = 'David';
+        // studentDetailsOne.city = 'Banglore';
+
+        // // To print in constructor way
+        // console.log(studentDetailsOne);
+
+        // To add a new property and to modify an existing property from obj:
+        let  studentDetails ={
+             fullName : 'Kishore',
+             age : 21,
+             qualification : 'BCA',
+             course : 'MERN'
+         }
+
+         // To add a new property:
+         studentDetails.coursFee = 20000;
+         console.log(studentDetails);
+
+         // To modify a existing property from an obj:
+         //shallow copy : This means that changes to the original object will also affect the copy.
+         studentDetails. fullName = 'Jhon';
+         console.log(studentDetails);
+
+         // To Access an object properties
+         /* 
+            1. Bracket Notation
+            2. Dot Notation
+         */
+
+         //  1. Bracket Notation(If you want to access dynamically)
+
+         let resOne = studentDetails['qualification'];
+         let resTwo = studentDetails['age'];
+         console.log(resOne,resTwo);
+
+         //  2. Dot Notation(if you wannt to acces statically)
+         console.log(studentDetails.course);
+
+
+         let res = 'Name';
+
+         // Bracket Notation [Dynamic]
+         console.log(studentDetails['full'+res]);
+
+         // Dot Notation [Static]
+         console.log(studentDetails.full+res);
+
+    </script>
+</body>
+</html>

@@ -43,7 +43,7 @@
             let number = "121";
             let rev = "";
             for(let i=number.length; i>0; i--){
-                rev = rev+number[i-1];
+                rev = rev + str[i-1];
             }
             if(number===rev){
                 console.log("Palindrome");
@@ -51,6 +51,7 @@
             else{
                 console.log("Not palindrome");
             }
+            
 
             //------multiplication table for a given number -----//
 
@@ -91,11 +92,12 @@
 
             //--------positive or negative in a given array-----//
 
-            let arr1 = [2,3,4,5];
+            let arr1 = [2,-3,4,5];
 
             let  count = 0;
             for(let i=0;i<arr1.length;i++){
-                if(arr1[i] %  2 === 0){
+                if(arr1[i] > 0 )
+                {
                     count = count + 1; 
                 }
             }
@@ -113,7 +115,7 @@
                 console.log(`${b} is greater than ${a}`);
             }
 
-
+            
             
            
 

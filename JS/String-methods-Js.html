@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and String methods</title>
+</head>
+<body>
+    <script>
+
+        // to call string in literal way
+
+        // let course ='JavaScript';
+        // console.log(course);
+        // console.log(typeof course);
+        // console.log(course.length);
+
+        // console.log(course[4]);
+
+
+        // for(let i=0;i<course.length;i++){
+        //     console.log(course[i]);
+        // }
+
+        // String Methods:
+
+        let course ='JavaScript course';
+        console.log(course);
+
+        // 1.indexof
+
+        console.log(course.indexOf('a'));
+        
+        // 2. lastinndexof
+
+        console.log(course.lastIndexOf('a'));
+
+        // 3. charat
+
+        console.log(course.charAt(5));
+        console.log(course.charCodeAt(5));
+        
+        // 4. substring
+
+        console.log(course.substring(0,4));
+        
+        // 5.uppercase , lowercase
+
+        console.log(course.toLocaleUpperCase());
+        console.log(course.toLocaleLowerCase());
+        
+        // 6. split
+
+        console.log(course.split());
+        
+        // 7. replace
+
+        console.log(course.replace('course','development'));
+        console.log(course.replaceAll('course','development'));
+        
+        // 8. includes
+
+        console.log(course.includes('z'));
+
+
+
+    </script>
+</body>
+</html>
