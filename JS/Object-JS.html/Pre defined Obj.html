@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predefined-Obj-Js</title>
+</head>
+<body>
+    <button>Spider-Man</button>
+    <script>
+        
+        document.getElementsByTagName('button')[0].addEventListener('click',function(){
+            // window.location.href='https://www.marvel.com/characters/spider-man-peter-parker';
+            window.open('https://www.marvel.com/characters/spider-man-peter-parker');
+            console.log(window.location);
+        })
+
+        console.log(navigator);
+
+        // Math
+
+        let mark = 96.3;
+
+        console.log(mark);
+        console.log('the mark is = ' + Math.floor(mark) + " Percentage" );
+        console.log('the mark is = ' + Math.ceil(mark) + " Percentage" );
+        console.log('the mark is = ' + Math.round(mark) + " Percentage" );
+
+        // Date - Object
+
+        let today = new Date();
+        console.log(today);
+
+        console.log(today.getDay());
+        console.log(today.getFullYear());
+        console.log(today.getHours());
+        console.log(today.getMonth());
+
+
+        // Date Formater
+        function dateFormate(){
+            return (today.getDate())+"-0"+(today.getMonth()+1)+"-"+today.getFullYear();
+        }
+        console.log(dateFormate());
+
+        // function dateFormate(){
+        //     return (today.getFullYear())+"-0"+(today.getDay())+"-"+(today.getMonth());
+        // }
+        // console.log(dateFormate());
+
+
+        today.setDate(24);
+        today.setFullYear(2024);
+
+        console.log(today);
+
+
+
+        let institute ={
+            course : 'Full stack',
+            duration : '6 months',
+            mode : 'Online & Offline'
+        }
+
+        let product ={
+            brand_name : 'Dell',
+            price : 20000
+        }
+
+        let keys = Object.keys(institute);
+        console.log(keys);
+
+        let value = Object.values(institute);
+        console.log(value);
+
+
+        // assign
+
+        let a = Object.assign(institute,product);
+        console.log(a);
+
+
+    </script>
+</body>
+</html>

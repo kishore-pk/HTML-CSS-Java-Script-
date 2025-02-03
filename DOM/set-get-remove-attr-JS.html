@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set-get-and-removr-attributes-JS</title>
+</head>
+<body>
+    <a href="https://en.wikipedia.org/wiki/Spider-Man_in_film" target="_blank" id ="myLink">Spider-Man</a>
+
+    <p id="setColor">This is a para element</p>
+    <button type="button" onclick="setStyle()">Click her  to change the para element color</button> <br>
+    <br> <br> <br>
+    <script>
+
+        // To select  an element by ID  selector
+        let link = document.getElementById('myLink');
+
+        // To get an attribute value from anchor tag
+        let getAttr = link.getAttribute('href');
+        document.write(getAttr); 
+        
+        // To get target attribute value from anchor tag
+        let targetValue = link.getAttribute('target'); 
+        document.write(targetValue)
+
+
+        // function declaration
+        function setStyle(){
+            // selecting  para element by Id selector
+            let getElement = document.getElementById('setColor');
+
+            // To set style  to the para element
+            getElement.style.color = 'red';
+            getElement.style.border = '10px solid blue'
+        }
+
+
+        // To remove href attribute value fromm anchor tag
+
+        link.removeAttribute('');
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

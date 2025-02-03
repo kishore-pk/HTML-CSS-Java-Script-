@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Functions-JS</title>
+</head>
+<body>
+    <script>
+
+
+        // functions
+
+        // 1.Function without parameter
+        
+        function subject(){
+            document.write('<h1> Java and Python </h1');
+        }
+        subject();
+
+        function greet(){
+            document.write('<h2> Hello,how are you? </h2>');
+        }
+        
+        greet();
+        greet();
+        greet();
+        greet();
+
+        function games(){
+            document.write('<h1> cricket and football </h1>');
+        }
+        games();
+
+        // 2.Function with parameter
+
+        /*
+            syntax:
+
+            function f-n(p1,p2,p3......pN){
+                // Code
+            }
+            f-n(arg1, arg2, arg3......argN)
+       */
+
+            function studentDetails(UserName,pass){
+                if((UserName == 'Jhon') && (pass == 1234)){
+                    console.log('Hi');
+                }
+                else{
+                    console.log('Bye');
+                }
+            }
+            studentDetails('Jhon','1234');
+            studentDetails('hari','1234');
+            studentDetails('Jhon','1234','backend')
+
+            // 3.Function with defaault parameter
+
+            function courseFee(amount,discount=20){
+                let finalPrice = amount - (amount*discount/100);
+                console.log(finalPrice);
+            }
+
+            courseFee(1000);
+            courseFee(100,50);
+
+
+            // 4.Function with return statement
+
+            function add(){
+                let a =2;
+                let b=1;
+                return a+b;
+            }
+            console.log(add()); 
+
+            function hi(){
+                let msg = 'Hello';
+                return msg;
+            }
+            let res = hi();
+            console.log(res); 
+
+            function a(){
+                let food = 'Biriyani';
+                return food;
+            }
+            let res1 = a();
+            console.log(res1);
+          
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        //-------minimum and maximum numbers-------//
+        function minMax(arr){
+            return[Math.min(...arr), Math.max(...arr)];
+            }
+        
+        console.log(minMax([2,3,4,5]));
+        
+
+        //------vowels-------//
+        function vowelString(s){
+            let count = 0;
+            for(let i=0;i<s.length;i++){
+                if(s[i] == "a" || s[i] == "e" || s[i] == "i" || s[i] == "o" || s[i] == "u"){
+                count += 1;
+        }
+        }
+        console.log
+        } 
+
+        
+        /* Return the sum of all items in an array, where each item is
+        multiplied by its index (zero-based). For empty arrays,return 0.*/
+
+        function sumNumber(array){
+            let sum = 0;
+            for(let i=0;i<array.length;i++){
+                let result = array[i] * i;
+                sum += result;
+        }
+        console.log(sum);
+        }
+        let array = [1,2,3,4,5];
+        sumNumber(array)
+       
+
+       
+        //-----alpha numeric coupon-----//
+        function coupon(length = 10){
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let coupon = "";
+
+            for (let i = 0; i<length; i++){
+                var random = Math.floor(Math.random() * characters.length);
+                coupon += characters[random];
+            }
+
+            return coupon;
+        }
+        console.log(coupon());
+
+
+
+        
+        //-------remove duplicates------//
+        function removeDuplicates(arr){
+           return[...new Set(arr)];
+        }
+        let input = [1,1,2,3,4,5,8];
+        let output = removeDuplicates(input)
+        console.log(output);
+
+        
+        
+        //------return string lenth in array----//
+        function stringLength(arr){
+            return arr.map(str => str.length);
+        }
+        let input1 = ['hello'];
+        let output1 = stringLength(input1);
+        console.log(output1);
+
+        
+        
+        //------check number is even-----//
+        function even(num){
+            return num % 2 === 0;
+        }
+
+        console.log(even(2));
+        console.log(even(1));
+
+
+        //-----seperate even and odd numbers----//
+        function evenOdd(num){
+            let even = [];
+            let odd = [];
+            for(let i=0;i<num.length;i++)
+        {
+              if(num[i] % 2 === 0)
+            {
+                even.push(num[i]);
+            }
+        else{
+                odd.push(num[i]);
+            }
+        }
+        console.log(even, odd);
+        }
+
+        let num1 = [1,2,3,4,5,6,7,8,9];
+        evenOdd(num1);
+
+
+        //------sum of all numbers-----//
+        function sumNumber(numbers){
+            let sum = 0;
+            for(let i of numbers){
+                sum =  sum + i;
+            }
+            console.log(sum);
+        }
+        let numbers = [1,2,3];
+        sumNumber(numbers);
+    </script>
+</body>
+</html>

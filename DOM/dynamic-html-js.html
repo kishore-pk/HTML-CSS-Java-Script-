@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating-DHTML-JS</title>
+    <style>
+        section{
+            display: flex;
+        }
+        section figure{
+            flex: 1;
+            margin: 0px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--Creating HTML layout-->
+    <!-- <section>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s" alt="">
+            <figcaption>UI Development</figcaption>
+            <figcaption>UI Developmebt Training Program</figcaption>
+            <figcaption>Actual Price: 45,000</figcaption>
+            <figcaption>Discount Price: 40,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s" alt="">
+            <figcaption>UI Development</figcaption>
+            <figcaption>UI Developmebt Training Program</figcaption>
+            <figcaption>Actual Price: 45,000</figcaption>
+            <figcaption>Discount Price: 40,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s" alt="">
+            <figcaption>UI Development</figcaption>
+            <figcaption>UI Developmebt Training Program</figcaption>
+            <figcaption>Actual Price: 45,000</figcaption>
+            <figcaption>Discount Price: 40,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s" alt="">
+            <figcaption>UI Development</figcaption>
+            <figcaption>UI Developmebt Training Program</figcaption>
+            <figcaption>Actual Price: 45,000</figcaption>
+            <figcaption>Discount Price: 40,000</figcaption>
+        </figure>
+    </section> -->
+
+
+    <script>
+
+        /* Sample data*/
+        let cards = [
+            {
+                imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s',
+                title : 'UI Development',
+                description : 'UI Developmebt Training Program',
+                actual_price :45000,
+                discount_price :40000
+            },
+            {
+                imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s',
+                title : 'UI Development',
+                description : 'UI Developmebt Training Program',
+                actual_price :45000,
+                discount_price :40000
+            },
+            {
+                imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s',
+                title : 'UI Development',
+                description : 'UI Developmebt Training Program',
+                actual_price :45000,
+                discount_price :40000
+            },
+            {
+                imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s',
+                title : 'UI Development',
+                description : 'UI Developmebt Training Program',
+                actual_price :45000,
+                discount_price :40000
+            }
+        ];
+
+
+
+
+
+        /*****************   Approach - 1 (String)  *******************/ 
+
+        // To get  all the data from an array of object
+        /*let dynamicCards = '<section>';
+        for(let i=0 ; i<cards.length ; i++){
+            dynamicCards += '<figure>'
+            dynamicCards += '<img src="'+cards[i].imageUrl+'" alt="logo"/>';
+            dynamicCards += '<figcaption>'+cards[i].title+'</figcaption>';
+            dynamicCards += '<figcaption>'+cards[i].description+'</figcaption>';
+            dynamicCards += '<figcaption> actual_price :'+cards[i].actual_price+'</figcaption>';
+            dynamicCards += '<figcaption>  discount_price :'+cards[i].discount_price+'</figcaption>';
+            dynamicCards += '</figure>'
+
+        }
+        dynamicCards += '</section>';
+
+        // to print an output
+        document.write(dynamicCards);*/
+
+
+        /***************** Approach - 2 (Backtik)  *******************/ 
+
+        // To get  all the data from an array of object
+        let dynamicCards = `<section>`;
+        for(let i=0 ; i<cards.length ; i++){
+            dynamicCards += `
+            <figure>
+                <img src="${cards[i].imageUrl}">
+                <figcaption>${cards[i].title}</figcaption>
+                <figcaption>${cards[i].description}</figcaption>
+                <figcaption>Actual Price: ${cards[i].actual_price}</figcaption>
+                <figcaption>Discount Price: ${cards[i].discount_price}</figcaption>
+            </figure>
+            
+            `
+
+        }
+        dynamicCards += `</section>`;
+        document.write(dynamicCards); 
+
+
+
+
+        /***************** Approach - 3 (Refering DOM Manipulation methods)  *******************/ 
+        
+        // To create an element by DOM element
+
+       /* let parentEle = document.createElement('section');
+        let figEle = document.createElement('figure');
+        let imageEle = document.createElement('img');
+
+        // Setting an attribute to  image element:
+        imageEle.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7MzxSEH8BBiq3b61TIoVJp5c5cbdYpjoIw&s')
+        
+
+
+        
+        let figCapEle1 = document.createElement('figcaption');
+        let figCapEle1Text1 = document.createTextNode('UI Development')
+        figCapEle1.appendChild(figCapEle1Text1)
+
+        let figCapEle2 = document.createElement('figcaption');
+        let figCapEle2Text2 = document.createTextNode('UI Development Training Program')
+        figCapEle2.appendChild(figCapEle2Text2)
+
+        let figCapEle3 = document.createElement('figcaption');
+        let figCapEle3Text3 = document.createTextNode('actual_price :45000')
+        figCapEle3.appendChild(figCapEle3Text3)
+
+        let figCapEle4 = document.createElement('figcaption');
+        let figCapEle4Text4 = document.createTextNode('discount_price :40000')
+        figCapEle4.appendChild(figCapEle4Text4)
+
+
+
+
+
+
+        // to append  children to the  parent
+        parentEle.appendChild(figEle);
+        figEle.appendChild(imageEle);
+        figEle.appendChild(figCapEle1);
+        figEle.appendChild(figCapEle2);
+        figEle.appendChild(figCapEle3);
+        figEle.appendChild(figCapEle4);
+
+        
+        
+        
+        
+        
+        document.write(parentEle.outerHTML); */
+        
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

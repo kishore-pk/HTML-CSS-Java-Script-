@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate  Functionns-JS</title>
+</head>
+<body>
+    <script>
+
+
+
+        // Expression (Anonymous Function)
+        /*
+        Syntax:
+
+        function(){
+
+            // code
+        }
+        */
+
+        // variable function
+        /*
+        Syntax:
+
+        let v_n = function(){
+
+            // code
+        }
+        v_n()
+        */
+       // Example
+
+        let res = function(a,b){
+        let add = a+b;
+        console.log(add);
+       }
+       res(2,1);
+
+       // Using return statement
+
+        let resOne = function(a,b){
+        let add = a+b;
+        return add;
+       }
+
+       console.log(resOne(2,3));
+
+       // Arrow Function--that gives a clean code to write a function
+
+       /*
+       Syntax:
+
+       () =>{
+
+        // code
+       
+        }
+       */
+
+       // Example
+
+        let res2 = (a,b,c)=>{
+        let add = a+b+c;
+        console.log(add);
+        }
+        console.log(res2(2,1,1));
+
+        // Using return statement
+
+        let res3 = (a,b,c)=>{
+        let add = a+b+c;
+        return(add);
+        }
+        // console.log(res3(2,2,2));
+        let finalRes = res3(2,2,2);
+        console.log(finalRes);
+
+
+        // nested functions
+
+        /*
+        Syntax:
+
+        function parent(){
+
+            function children(){
+
+            }
+            children()
+        } 
+        parent()
+        */
+
+        // Example
+        function sum(a,b){
+            let sum = a+b;
+
+            function multiply(c,d){
+                let multiply = c*d;
+            }
+            console.log(multiply(5,5)); 
+        }
+        console.log(sum(30,3));
+
+        // IIFE / IIFAnnotation / Self invoking function
+        
+        /*
+        Syntax:
+
+        (function(){
+            
+        })()
+        */
+
+        // Example
+        (function() {
+            alert('Hiiiiiiiiiiiiiiiiiiiiii');
+        })();
+       
+
+
+    </script>
+</body>
+</html>
